@@ -1,5 +1,173 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fafafa;
+}
+
+/* ===== HEADER ===== */
+.site-header {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.site-header .tagline {
+  font-size: 0.95rem;
+  color: #cfd8dc;
+  margin-top: 0.3rem;
+}
+
+/* ===== NAV ===== */
+nav {
+  background-color: #34495e;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;      /* móvil: apilado */
+  align-items: center;
+}
+
+.nav-list li a {
+  display: block;
+  padding: 0.9rem 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-list li a:hover {
+  background-color: #2c3e50;
+}
+
+/* ===== MAIN / SECTIONS ===== */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #2c3e50;
+  padding-bottom: 0.4rem;
+}
+
+/* ===== FLEXBOX: PROYECTOS (1 col -> 3 col) ===== */
+.flex-container {
+  display: flex;                /* activa Flexbox en este contenedor */
+  flex-direction: column;       /* móvil: apila las tarjetas verticalmente */
+  align-items: stretch;         /* eje transversal: todas las tarjetas del mismo ancho */
+  justify-content: flex-start;  /* eje principal: las tarjetas se agrupan al inicio */
+  gap: 1rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1.2rem;
+  flex: 1;                     /* en escritorio se reparten el ancho por igual */
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+/* ===== FORMULARIO ACCESIBLE ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+input,
+textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+button {
+  align-self: flex-start;
+  background-color: #2c3e50;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1a242f;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: #2c3e50;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+/* =========================================================
+   BREAKPOINTS RESPONSIVOS
+   Mobile-first: por defecto todo es una columna.
+   ========================================================= */
+
+/* TABLET: 768px en adelante */
+@media (min-width: 768px) {
+  .nav-list {
+    flex-direction: row;       /* el menú pasa de columna a fila */
+    justify-content: center;   /* los links se centran en el eje principal (horizontal) */
+    align-items: center;       /* se alinean verticalmente entre sí */
+  }
+
+  .flex-container {
+    flex-direction: row;       /* las tarjetas pasan de columna a fila */
+    flex-wrap: wrap;           /* si no caben todas en una fila, saltan a la siguiente */
+    align-items: stretch;
+  }
+
+  .card {
+    flex: 1 1 45%;             /* crece/encoge, base de 45% del ancho -> ~2 columnas en tablet */
+  }
+}
+
+/* ESCRITORIO: 1024px en adelante */
+@media (min-width: 1024px) {
+  .flex-container {
+    flex-wrap: nowrap;         /* ya caben las 3 tarjetas en una sola fila */
+    justify-content: center;   /* se reparten centradas en el contenedor */
+  }
+
+  .card {
+    flex: 1;                   /* las 3 tarjetas se reparten el ancho por igual -> 3 columnas */
+  }
 }
