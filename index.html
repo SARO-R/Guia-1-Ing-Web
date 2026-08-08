@@ -1,83 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
-
-    <link rel="stylesheet" href="CSS/estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio | Tu Nombre</title>
+  <meta name="description" content="Portafolio personal de Tu Nombre - Desarrollador Web">
+  <link rel="stylesheet" href="CSS/estilos.css">
 </head>
-
 <body>
 
-    <header>
-        <h1>Mi Portafolio</h1>
+  <header>
+    <p class="logo">Tu Nombre</p>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Sobre mí</a>
-            <a href="#">Proyectos</a>
-            <a href="#">Contacto</a>
-        </nav>
-    </header>
+  <main>
 
-    <main>
+    <!-- ===== INICIO ===== -->
+    <section id="inicio">
+      <h1>Hola, soy Tu Nombre</h1>
+      <p>Estudiante de Ingeniería Web, apasionado por el desarrollo front-end y el diseño accesible.</p>
+      <a href="#proyectos" class="btn">Ver mis proyectos</a>
+    </section>
 
-        <section>
-            <h2>Sobre mí</h2>
+    <!-- ===== SOBRE MÍ ===== -->
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <article>
+        <p>
+          Soy estudiante de Ingeniería en Desarrollo de Software. Me interesa construir
+          páginas web semánticamente correctas y accesibles, aplicando buenas prácticas
+          de HTML5 y CSS moderno como Flexbox. Actualmente estoy aprendiendo a diseñar
+          interfaces responsivas que funcionen bien en cualquier dispositivo.
+        </p>
+      </article>
+    </section>
 
-            <article>
-                <p>
-                    Soy estudiante de Ingeniería de Software y estoy aprendiendo HTML5 y CSS Flexbox.
-                </p>
-            </article>
-        </section>
+    <!-- ===== PROYECTOS ===== -->
+    <section id="proyectos">
+      <h2>Proyectos</h2>
 
-        <section>
-            <h2>Proyectos</h2>
+      <article class="proyecto">
+        <h3>Proyecto 1</h3>
+        <p>Descripción breve del proyecto: qué problema resuelve y qué tecnologías utiliza.</p>
+        <a href="#" target="_blank" rel="noopener">Ver proyecto</a>
+      </article>
 
-            <article>
-                <h3>Proyecto 1</h3>
-                <p>Descripción del proyecto.</p>
-            </article>
+      <article class="proyecto">
+        <h3>Proyecto 2</h3>
+        <p>Descripción breve del proyecto: qué problema resuelve y qué tecnologías utiliza.</p>
+        <a href="#" target="_blank" rel="noopener">Ver proyecto</a>
+      </article>
 
-            <article>
-                <h3>Proyecto 2</h3>
-                <p>Descripción del proyecto.</p>
-            </article>
+      <article class="proyecto">
+        <h3>Proyecto 3</h3>
+        <p>Descripción breve del proyecto: qué problema resuelve y qué tecnologías utiliza.</p>
+        <a href="#" target="_blank" rel="noopener">Ver proyecto</a>
+      </article>
+    </section>
 
-            <article>
-                <h3>Proyecto 3</h3>
-                <p>Descripción del proyecto.</p>
-            </article>
-        </section>
+    <!-- ===== CONTACTO ===== -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form action="#" method="post">
 
-        <section>
-            <h2>Contacto</h2>
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+        </div>
 
-            <form>
+        <div class="campo">
+          <label for="correo">Correo</label>
+          <input type="email" id="correo" name="correo" autocomplete="email" required>
+        </div>
 
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre">
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        </div>
 
-                <label for="correo">Correo</label>
-                <input type="email" id="correo">
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
 
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje"></textarea>
+  </main>
 
-                <button>Enviar</button>
+  <footer>
+    <nav aria-label="Redes sociales">
+      <ul>
+        <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2026 Tu Nombre. Todos los derechos reservados.</p>
+  </footer>
 
-            </form>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>© 2026 Mi Portafolio</p>
-    </footer>
-
+  <script src="js/script.js"></script>
 </body>
-
 </html>
